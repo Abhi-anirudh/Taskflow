@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../utils/api';
 import { useAuth } from '../context/AuthContext';
 import { format, isPast, parseISO } from 'date-fns';
-import { AlertTriangle, Clock, CheckCircle2, FolderKanban, TrendingUp, CalendarClock, Activity } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, FolderKanban, TrendingUp, CalendarClock, Activity } from 'lucide-react';
 
 function StatCard({ icon: Icon, label, value, color, sub }) {
   return (
@@ -53,7 +53,7 @@ export default function Dashboard() {
   if (loading) return <div className="loading-screen"><div className="spinner" /></div>;
   if (!data) return null;
 
-  const { stats, overdueTasks, recentTasks, upcomingTasks, myProjects, recentActivity } = data;
+  const { stats, overdueTasks, upcomingTasks, myProjects, recentActivity } = data;
   const statusMap = {};
   stats.tasksByStatus.forEach(s => { statusMap[s.status] = s.count; });
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import api from '../utils/api';
 import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
-import { Shield, Trash2, Users } from 'lucide-react';
+import { Shield, Trash2 } from 'lucide-react';
 import { format } from 'date-fns';
 
 export default function AdminUsers() {
