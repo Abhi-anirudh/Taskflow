@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from '../utils/api';
 import toast from 'react-hot-toast';
-import { useAuth } from '../context/AuthContext';
 import { Plus, X, ChevronLeft, Trash2, MessageSquare, Calendar } from 'lucide-react';
 import { format, isPast, parseISO } from 'date-fns';
 
