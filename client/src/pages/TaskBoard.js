@@ -16,7 +16,6 @@ const COLUMNS = [
 const PRIORITIES = ['low','medium','high','urgent'];
 
 function TaskModal({ task, members, projectId, onClose, onSaved }) {
-  const {  } = useAuth();
   const [form, setForm] = useState({
     title: task?.title||'', description: task?.description||'',
     status: task?.status||'todo', priority: task?.priority||'medium',
