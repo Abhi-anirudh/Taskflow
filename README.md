@@ -178,6 +178,11 @@ DB_PATH=/app/data/taskflow.db
 
 5. **Deploy** — Railway builds and starts automatically
 
+### Railway build note
+- This repo includes [nixpacks.toml](nixpacks.toml) to make Railway install the native build prerequisites required by `better-sqlite3`.
+- The app is pinned to Node 20 in [package.json](package.json), which avoids the Node 24 build mismatch seen in the Railway logs.
+- If Railway reuses an old cached build, trigger a fresh redeploy from the deployment page after pushing these files.
+
 ### Default Admin
 The app creates a default admin on first run:
 - **Email**: `admin@taskflow.com`  

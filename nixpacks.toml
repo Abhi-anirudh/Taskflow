@@ -1,0 +1,12 @@
+[phases.setup]
+# Keep default packages and add Node 20 (nix package name) so prebuilt binaries match
+nixPkgs = ['...', 'nodejs-20_x']
+# Install system packages required to build native modules like better-sqlite3
+aptPkgs = [
+  'python3',
+  'build-essential',
+  'g++',
+  'make',
+  'libsqlite3-dev',
+  'pkg-config'
+]
